@@ -1,0 +1,125 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@mixin flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quickLinks {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 2;
+    &:before{          
+      display: block;
+      font-size: 0.9rem;
+    }
+  }
+    .quicklink{
+      @include flex-box;
+      width: 200px;
+      height: 200px;
+      margin: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background-color: #eeeeee;
+      box-shadow: 0 0 10px rgba(38,38,38,.3);
+      
+      &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(0deg,rgba(0,0,0,.2) 20%,transparent);
+      }
+      
+     .icon{
+      font-size: 27px;
+      padding-right: 5px;
+      margin-top: 10px;
+     }
+      
+    }
+      
+     
+  
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+}
