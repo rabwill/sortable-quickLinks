@@ -16,7 +16,7 @@ export default class QuickLinks extends React.Component<IQuickLinksProps, {}> {
   }
   public render(): React.ReactElement<IQuickLinksProps> {
     return (
-      <div className={styles.quickLinks}>
+      <div className={styles.quickLinks}>Hello
         {this.props.links && this.props.links.map((item, index) =>
           this.mapItems(item, index))}
       </div>
